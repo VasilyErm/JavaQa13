@@ -153,4 +153,58 @@ class TodosTest {
         Task[] expected = {meeting};
         Assertions.assertArrayEquals(expected, actual);
     }
+
+    @Test
+    public void meetingTestGetId() {
+        Meeting meeting = new Meeting(555, "Разработка нового функционала", "Приложене Нетология","16.04 после обеда");
+
+        int actual = meeting.getId();
+        int expected = 555;
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void meetingTestGetTopic() {
+        Meeting meeting = new Meeting(555, "Разработка нового функционала", "Приложене Нетология","16.04 после обеда");
+
+        String actual = meeting.getTopic();
+        String expected = "Разработка нового функционала";
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void meetingTestGetProject() {
+        Meeting meeting = new Meeting(555, "Разработка нового функционала", "Приложене Нетология","16.04 после обеда");
+
+        String actual = meeting.getProject();
+        String expected = "Приложене Нетология";
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void meetingTestGetStart() {
+        Meeting meeting = new Meeting(555, "Разработка нового функционала", "Приложене Нетология","16.04 после обеда");
+
+        String actual = meeting.getStart();
+        String expected = "16.04 после обеда";
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void simpleTaskId() {
+        SimpleTask simpleTask = new SimpleTask(5, "Проработка функционала 16.04");
+
+        int actual = simpleTask.id;
+        int expected = 5;
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void simpleTaskGetTitle() {
+        SimpleTask simpleTask = new SimpleTask(5, "Проработка функционала 16.04");
+
+        String actual = simpleTask.getTitle();
+        String expected = "Проработка функционала 16.04";
+        Assertions.assertEquals(expected, actual);
+    }
 }
