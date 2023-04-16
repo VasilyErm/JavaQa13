@@ -128,4 +128,29 @@ class TodosTest {
         Task[] expected = {};
         Assertions.assertArrayEquals(expected, actual);
     }
+
+    @Test
+    public void meetingTest() {
+        SimpleTask simpleTask = new SimpleTask(5, "Проработка функционала 16.04");
+
+        String[] subtasks = {"Проработка", "Нетология", "функционал"};
+        Epic epic = new Epic(55, subtasks);
+
+        Meeting meeting = new Meeting(
+                555,
+                "Разработка нового функционала",
+                "Приложене Нетология",
+                "16.04 после обеда"
+        );
+
+        Todos todos = new Todos();
+
+        todos.add(simpleTask);
+        todos.add(epic);
+        todos.add(meeting);
+
+        Task[] actual = todos.search("Разработка");
+        Task[] expected = {meeting};
+        Assertions.assertArrayEquals(expected, actual);
+    }
 }
