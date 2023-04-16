@@ -19,7 +19,7 @@ class TaskTest {
 
         boolean actual = simpleTask.matches("поз");
         boolean expected = false;
-        Assertions.assertFalse( false);
+        Assertions.assertFalse(false);
     }
 
     @Test

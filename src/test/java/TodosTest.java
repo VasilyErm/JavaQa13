@@ -30,7 +30,7 @@ class TodosTest {
     }
 
     @Test
-    public void simpleTaskEpicMeetingTest () {
+    public void simpleTaskEpicMeetingTest() {
         SimpleTask simpleTask = new SimpleTask(5, "Проработка функционала 16.04");
 
         String[] subtasks = {"Проработка", "Нетология", "функционал"};
@@ -50,12 +50,12 @@ class TodosTest {
         todos.add(meeting);
 
         Task[] actual = todos.search("функционал");
-        Task[] expected ={simpleTask, epic, meeting};
+        Task[] expected = {simpleTask, epic, meeting};
         Assertions.assertArrayEquals(expected, actual);
     }
 
     @Test
-    public void simpleTaskEpicTest () {
+    public void simpleTaskEpicTest() {
         SimpleTask simpleTask = new SimpleTask(5, "Проработка функционала 16.04");
 
         String[] subtasks = {"Проработка", "Нетология", "функционал"};
@@ -75,12 +75,12 @@ class TodosTest {
         todos.add(meeting);
 
         Task[] actual = todos.search("Проработка");
-        Task[] expected ={simpleTask, epic};
+        Task[] expected = {simpleTask, epic};
         Assertions.assertArrayEquals(expected, actual);
     }
 
     @Test
-    public void EpicMeetingTest () {
+    public void EpicMeetingTest() {
         SimpleTask simpleTask = new SimpleTask(5, "Проработка функционала 16.04");
 
         String[] subtasks = {"Проработка", "Нетология", "функционал"};
@@ -100,12 +100,12 @@ class TodosTest {
         todos.add(meeting);
 
         Task[] actual = todos.search("Нетология");
-        Task[] expected ={epic, meeting};
+        Task[] expected = {epic, meeting};
         Assertions.assertArrayEquals(expected, actual);
     }
 
     @Test
-    public void falseTest () {
+    public void falseTest() {
         SimpleTask simpleTask = new SimpleTask(5, "Проработка функционала 16.04");
 
         String[] subtasks = {"Проработка", "Нетология", "функционал"};
@@ -125,7 +125,7 @@ class TodosTest {
         todos.add(meeting);
 
         Task[] actual = todos.search("Футбол");
-        Task[] expected ={};
+        Task[] expected = {};
         Assertions.assertArrayEquals(expected, actual);
     }
 }
