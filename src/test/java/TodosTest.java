@@ -156,7 +156,7 @@ class TodosTest {
 
     @Test
     public void meetingTestGetId() {
-        Meeting meeting = new Meeting(555, "Разработка нового функционала", "Приложене Нетология","16.04 после обеда");
+        Meeting meeting = new Meeting(555, "Разработка нового функционала", "Приложене Нетология", "16.04 после обеда");
 
         int actual = meeting.getId();
         int expected = 555;
@@ -165,7 +165,7 @@ class TodosTest {
 
     @Test
     public void meetingTestGetTopic() {
-        Meeting meeting = new Meeting(555, "Разработка нового функционала", "Приложене Нетология","16.04 после обеда");
+        Meeting meeting = new Meeting(555, "Разработка нового функционала", "Приложене Нетология", "16.04 после обеда");
 
         String actual = meeting.getTopic();
         String expected = "Разработка нового функционала";
@@ -174,7 +174,7 @@ class TodosTest {
 
     @Test
     public void meetingTestGetProject() {
-        Meeting meeting = new Meeting(555, "Разработка нового функционала", "Приложене Нетология","16.04 после обеда");
+        Meeting meeting = new Meeting(555, "Разработка нового функционала", "Приложене Нетология", "16.04 после обеда");
 
         String actual = meeting.getProject();
         String expected = "Приложене Нетология";
@@ -183,7 +183,7 @@ class TodosTest {
 
     @Test
     public void meetingTestGetStart() {
-        Meeting meeting = new Meeting(555, "Разработка нового функционала", "Приложене Нетология","16.04 после обеда");
+        Meeting meeting = new Meeting(555, "Разработка нового функционала", "Приложене Нетология", "16.04 после обеда");
 
         String actual = meeting.getStart();
         String expected = "16.04 после обеда";

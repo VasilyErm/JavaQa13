@@ -127,10 +127,10 @@ class TaskTest {
 
     @Test
     public void testTaskEquals() {
-        Task task = new Task( 5);
+        Task task = new Task(5);
 
         int actual = 5;
         int expected = task.id;
-        Assertions.assertEquals(actual,expected);
+        Assertions.assertEquals(actual, expected);
     }
 }
